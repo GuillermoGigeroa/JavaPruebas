@@ -8,6 +8,7 @@ public class Main {
 		Planta planta3 = new Planta();
 		// Incluir regador que reciba la planta y la pueda regar. Y esto modifique el
 		// estado de la planta
+		// prueba de push con python
 		View.MostrarPlanta(planta1);
 		View.MostrarPlanta(planta2);
 		View.MostrarPlanta(planta3);
