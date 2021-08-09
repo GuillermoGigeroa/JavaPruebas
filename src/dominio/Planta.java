@@ -1,32 +1,40 @@
 package dominio;
 
 public class Planta {
-	private String color;
-	private String nombre;
-	private Boolean regado;
+	String color;
+	String nombre;
+	Boolean regado;
 
 	Planta() {
+		this.MensajeCreado();
 		this.defaultNombre();
 		this.defaultColor();
 		this.defaultRiego();
 	}
 
 	Planta(String nombre) {
+		this.MensajeCreado();
 		this.nombre = nombre;
 		this.defaultColor();
 		this.defaultRiego();
 	}
 
 	Planta(String nombre, String color) {
+		this.MensajeCreado();
 		this.nombre = nombre;
 		this.color = color;
 		this.defaultRiego();
 	}
 
 	Planta(String nombre, String color, Boolean regado) {
+		this.MensajeCreado();
 		this.nombre = nombre;
 		this.color = color;
 		this.regado = regado;
+	}
+	
+	private void MensajeCreado() {
+		Util.Escribir("Una nueva planta ha sido creada.");
 	}
 
 	private void defaultColor() {

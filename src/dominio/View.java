@@ -26,6 +26,7 @@ public class View {
 		Nombre(estaPlanta.getNombre());
 		Color(estaPlanta.getColor());
 		EstadoDeRiego(estaPlanta.getRegado());
+		Util.Raya();
 		Util.Linea();
 	}
 }
