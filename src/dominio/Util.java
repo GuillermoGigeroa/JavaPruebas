@@ -1,4 +1,4 @@
-package pkg1;
+package dominio;
 
 public class Util {
 	public static void Escribir(String esto) {

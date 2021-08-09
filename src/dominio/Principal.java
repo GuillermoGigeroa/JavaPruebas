@@ -1,6 +1,6 @@
-package pkg1;
+package dominio;
 
-public class Main {
+public class Principal {
 
 	public static void main(String[] args) {
 		Planta planta1 = new Planta("Bebecita", "Amarillo");
@@ -8,7 +8,6 @@ public class Main {
 		Planta planta3 = new Planta();
 		// Incluir regador que reciba la planta y la pueda regar. Y esto modifique el
 		// estado de la planta
-		// prueba de push con python
 		View.MostrarPlanta(planta1);
 		View.MostrarPlanta(planta2);
 		View.MostrarPlanta(planta3);

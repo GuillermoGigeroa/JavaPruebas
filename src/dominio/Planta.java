@@ -1,4 +1,4 @@
-package pkg1;
+package dominio;
 
 public class Planta {
 	private String color;
@@ -30,15 +30,15 @@ public class Planta {
 	}
 
 	private void defaultColor() {
-		this.color = "Verde";
+		this.setColor("Verde");
 	}
 
 	private void defaultNombre() {
-		this.nombre = "Sin nombre";
+		this.setNombre("Sin nombre");
 	}
 
 	private void defaultRiego() {
-		this.regado = false;
+		this.setRegado(false);
 	}
 
 	protected void serRegado() {
@@ -59,5 +59,17 @@ public class Planta {
 
 	protected Boolean getRegado() {
 		return this.regado;
+	}
+	
+	protected void setColor(String color) {
+		this.color = color;
+	}
+	
+	protected void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	protected void setRegado(Boolean regado) {
+		this.regado = regado;
 	}
 }

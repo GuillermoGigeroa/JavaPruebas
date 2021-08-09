@@ -1,4 +1,4 @@
-package pkg1;
+package dominio;
 
 public class View {
 	public static void Nombre(String nombre) {
