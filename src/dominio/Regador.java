@@ -1,46 +1,34 @@
 package dominio;
 
-public class Regador {
+public class Regador extends NombreClase{
 	String nombre;
-	
-	Regador () {
-		this.MensajeCreado();
-		this.setNombre("Sin nombre");
+	// constructores
+	Regador () {this.inicializar();}
+	Regador (String nombre) {this.inicializar(nombre);}
+	// métodos de la clase
+	private void inicializar() {
+		super.inicializar("Regador", true);
+		super.MensajeCreado();
+		this.defaultNombre();
 	}
-	
-	Regador (String nombre) {
-		this.MensajeCreado();
+	private void inicializar(String nombre) {
+		super.inicializar("Regador", true);
+		super.MensajeCreado();
 		this.setNombre(nombre);
 	}
-	
-	private void MensajeCreado () {
-		Util.Escribir("Un nuevo regador ha sido creado.");
-	}
-
-	protected String getNombre() {
-		return nombre;
-	}
-
-	protected void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	
-	protected void llenarRegadera(Regadera regadera) {
-		regadera.llenar(this);
-	}
-	
 	protected Boolean regarPlanta(Planta planta, Regadera regadera) {
 		if (regadera.getTieneAgua()) {
 			this.MensajeRiego(planta);
 			planta.serRegado();
-			regadera.usar(this);
+			regadera.Usar(this);
 			return true;
 		}
 		return false;
-	}
-	
-	private void MensajeRiego(Planta planta) {
-		String mensaje = "El regador "+this.getNombre()+" ha regado la planta "+planta.getNombre()+".";
-		Util.Escribir(mensaje);
-	}
+	}	
+	private void defaultNombre() {this.setNombre("Sin nombre");}
+	protected void llenarRegadera(Regadera regadera) {regadera.llenar(this);}
+	private void MensajeRiego(Planta planta) {Util.Escribir("El regador "+this.getNombre()+" ha regado la planta "+planta.getNombre()+".");}
+	// getters & setters
+	protected String getNombre() {return nombre;}
+	protected void setNombre(String nombre) {this.nombre = nombre;}
 }
