@@ -1,20 +1,22 @@
 package dominio;
 
-public class Regador extends NombreClase{
+public class Regador extends Objeto{
 	String nombre;
 	// constructores
 	Regador () {this.inicializar();}
 	Regador (String nombre) {this.inicializar(nombre);}
 	// métodos de la clase
 	private void inicializar() {
-		super.inicializar("Regador", true);
-		super.MensajeCreado();
+		this.inicializarObjeto();
 		this.defaultNombre();
 	}
 	private void inicializar(String nombre) {
-		super.inicializar("Regador", true);
-		super.MensajeCreado();
+		this.inicializarObjeto();
 		this.setNombre(nombre);
+	}
+	private void inicializarObjeto() {
+		super.inicializar("Regador", true);
+		super.mensajeCreado();
 	}
 	protected Boolean regarPlanta(Planta planta, Regadera regadera) {
 		if (regadera.getTieneAgua()) {

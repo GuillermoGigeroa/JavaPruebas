@@ -1,40 +1,40 @@
 package dominio;
 
-public class Planta extends NombreClase{
+public class Planta extends Objeto{
 	String color;
 	String nombre;
 	Boolean regado;
 	// constructores
-	Planta() {this.Inicializar();}
-	Planta(String nombre) {this.Inicializar(nombre);}
-	Planta(String nombre, String color) {this.Inicializar(nombre, color);}
-	Planta(String nombre, String color, Boolean regado) {this.Inicializar(nombre, color, regado);}
+	Planta() {this.inicializar();}
+	Planta(String nombre) {this.inicializar(nombre);}
+	Planta(String nombre, String color) {this.inicializar(nombre, color);}
+	Planta(String nombre, String color, Boolean regado) {this.inicializar(nombre, color, regado);}
 	// métodos de la clase
-	private void Inicializar() {
-		super.inicializar("Planta", false);
-		super.MensajeCreado();
+	private void inicializar() {
+		this.inicializarObjeto();
 		this.defaultTodo();
 	}
-	private void Inicializar(String nombre) {
-		super.inicializar("Planta", false);
-		super.MensajeCreado();
+	private void inicializar(String nombre) {
+		this.inicializarObjeto();
 		this.setNombre(nombre);
 		this.defaultRiego();
 		this.defaultColor();
 	}
-	private void Inicializar(String nombre, String color) {
-		super.inicializar("Planta", false);
+	private void inicializar(String nombre, String color) {
+		this.inicializarObjeto();
 		this.setNombre(nombre);
 		this.setColor(color);
 		this.defaultRiego();
-		super.MensajeCreado();
 	}
-	private void Inicializar(String nombre, String color, Boolean regado) {
-		super.inicializar("Planta", false);
+	private void inicializar(String nombre, String color, Boolean regado) {
+		this.inicializarObjeto();
 		this.setNombre(nombre);
 		this.setColor(color);
 		this.setRegado(regado);
-		super.MensajeCreado();
+	}
+	private void inicializarObjeto() {
+		super.inicializar("planta", false);
+		super.mensajeCreado();
 	}
 	private void defaultTodo() {
 		this.defaultNombre();
