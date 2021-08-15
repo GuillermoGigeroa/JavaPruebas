@@ -1,7 +1,6 @@
 package dominio;
 
-public class Principal {
-
+public class Main {
 	public static void main(String[] args) {
 		Planta planta1 = new Planta("Bebecita", "Amarillo");
 		Planta planta2 = new Planta("Bebelin");
@@ -22,5 +21,4 @@ public class Principal {
 		View.MostrarPlanta(planta1);
 		View.MostrarPlanta(planta2);
 	}
-
 }

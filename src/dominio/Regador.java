@@ -26,7 +26,7 @@ public class Regador extends NombreClase{
 		return false;
 	}	
 	private void defaultNombre() {this.setNombre("Sin nombre");}
-	protected void llenarRegadera(Regadera regadera) {regadera.llenar(this);}
+	protected void llenarRegadera(Regadera regadera) {regadera.Llenar(this);}
 	private void MensajeRiego(Planta planta) {Util.Escribir("El regador "+this.getNombre()+" ha regado la planta "+planta.getNombre()+".");}
 	// getters & setters
 	protected String getNombre() {return nombre;}

@@ -9,19 +9,16 @@ public class Regadera extends NombreClase{
 	private void inicializar() { this.inicializar(this.defaultAgua());}
 	protected Boolean getTieneAgua() {return tieneAgua;}
 	protected void setTieneAgua(Boolean tieneAgua) {this.tieneAgua = tieneAgua;}
-	public void llenar(Regador regador) {
-		this.MensajeLleno(regador);
+	public void Llenar(Regador regador) {
 		this.tieneAgua = true;
+		this.Mensaje(regador);
 	}
 	public void Usar(Regador regador) {
-		this.MensajeVacio(regador);
 		this.tieneAgua = false;
+		this.Mensaje(regador);
 	}
-	private void MensajeVacio (Regador regador) {
-		Util.Escribir("Regadera ha sido utilizada por "+regador.getNombre()+" y se encuentra vacía.");
+	private void Mensaje(Regador regador) {
+		if(this.tieneAgua) {Util.Escribir("Regadera ha sido llenada por "+regador.getNombre()+".");}
+		else {Util.Escribir("Regadera ha sido utilizada por "+regador.getNombre()+" y se encuentra vacía.");}
 	}
-	private void MensajeLleno (Regador regador) {
-		Util.Escribir("Regadera ha sido llenada por "+regador.getNombre()+".");
-	}
-	
 }

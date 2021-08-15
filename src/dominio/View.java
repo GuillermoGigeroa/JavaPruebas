@@ -1,16 +1,8 @@
 package dominio;
 
 public class View {
-	public static void Nombre(String nombre) {
-		String texto = "Nombre de planta: " + nombre;
-		Util.Escribir(texto);
-	}
-
-	public static void Color(String color) {
-		String texto = "Color de planta: " + color;
-		Util.Escribir(texto);
-	}
-
+	public static void Nombre(String nombre) {Util.Escribir("Nombre de planta: " + nombre);}
+	public static void Color(String color) {Util.Escribir("Color de planta: " + color);}
 	public static void EstadoDeRiego(Boolean estado) {
 		String estadoDeRiego;
 		if (estado) {
@@ -21,7 +13,6 @@ public class View {
 		}
 		Util.Escribir("Estado de planta: " + estadoDeRiego);
 	}
-
 	public static void MostrarPlanta(Planta estaPlanta) {
 		Nombre(estaPlanta.getNombre());
 		Color(estaPlanta.getColor());
