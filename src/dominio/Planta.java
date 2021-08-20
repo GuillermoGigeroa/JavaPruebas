@@ -1,8 +1,8 @@
 package dominio;
 
-public class Planta extends Objeto{
+public class Planta implements Objeto{
 	String color;
-	String nombre;
+	String nombrePlanta;
 	Boolean regado;
 	// constructores
 	Planta() {this.inicializar();}
@@ -12,7 +12,9 @@ public class Planta extends Objeto{
 	// métodos de la clase
 	private void inicializar() {
 		this.inicializarObjeto();
-		this.defaultTodo();
+		this.defaultNombre();
+		this.defaultColor();
+		this.defaultRiego();		
 	}
 	private void inicializar(String nombre) {
 		this.inicializarObjeto();
@@ -33,24 +35,22 @@ public class Planta extends Objeto{
 		this.setRegado(regado);
 	}
 	private void inicializarObjeto() {
-		super.inicializar("planta", false);
-		super.mensajeCreado();
-	}
-	private void defaultTodo() {
-		this.defaultNombre();
-		this.defaultColor();
-		this.defaultRiego();		
+		this.mensajeCreado();
 	}
 	private void defaultColor() {this.setColor("Verde");}
 	private void defaultNombre() {this.setNombre("Sin nombre");}
 	private void defaultRiego() {this.setRegado(false);}
-	protected void serRegado() {this.regado = true;}
-	protected void secarse() {this.regado = false;}
+	protected void serRegado() {regado = true;}
+	protected void secarse() {regado = false;}
 	// getters & setters
-	protected String getColor() {return this.color;}
-	protected String getNombre() {return this.nombre;}
-	protected Boolean getRegado() {return this.regado;}
+	protected String getColor() {return color;}
+	protected String getNombre() {return nombrePlanta;}
+	protected Boolean getRegado() {return regado;}
 	protected void setColor(String color) {this.color = color;}
-	protected void setNombre(String nombre) {this.nombre = nombre;}
+	protected void setNombre(String nombre) {this.nombrePlanta = nombre;}
 	protected void setRegado(Boolean regado) {this.regado = regado;}
+	@Override
+	public void mensajeCreado() {
+		Util.Escribir(femenino+"planta.");
+	}
 }
