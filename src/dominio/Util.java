@@ -1,27 +1,33 @@
 package dominio;
 
 public class Util {
-	public static void Escribir(String esto) {
+	public static String mensaje_masculino() {
+		return "Se ha creado un nuevo ";
+	}
+	public static String mensaje_femenino() {
+		return "Se ha creado una nueva ";
+	}
+	public static void escribir(String esto) {
 		System.out.println(esto);
 	}
 
-	public static void Linea() {
+	public static void linea() {
 		System.out.println();
 	}
 
-	public static void Raya(int cantidadCaracteres) {
-		Escribir(Guiones(cantidadCaracteres));
+	public static void raya(int cantidadCaracteres) {
+		escribir(guiones(cantidadCaracteres));
 	}
 
-	public static void Raya() {
-		Escribir(Guiones());
+	public static void raya() {
+		escribir(guiones());
 	}
 
-	private static String Guiones() {
-		return Guiones(50);
+	private static String guiones() {
+		return guiones(50);
 	}
 
-	private static String Guiones(int cantidad) {
+	private static String guiones(int cantidad) {
 		String texto = "";
 		for (int x = 0; x < cantidad; x = x + 1) {
 			texto += "-";

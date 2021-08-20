@@ -7,7 +7,7 @@ public class Main {
 		Regador regador = new Regador("Guille",false);
 		Objeto regadera = new Regadera();
 
-		Util.Raya();
+		Util.raya();
 		View.MostrarPlanta(planta1);
 		View.MostrarPlanta(planta2);
 
@@ -17,7 +17,7 @@ public class Main {
 		regador.llenarRegadera(regadera);
 		regador.regarPlanta(planta2, regadera);
 
-		Util.Raya();
+		Util.raya();
 		View.MostrarPlanta(planta1);
 		View.MostrarPlanta(planta2);
 	}

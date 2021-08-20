@@ -1,6 +1,6 @@
 package dominio;
 
-public class Planta implements Objeto {
+public class Planta extends Objeto {
 	String color;
 	String nombrePlanta;
 	Boolean regado;
@@ -102,6 +102,6 @@ public class Planta implements Objeto {
 
 	@Override
 	public void mensajeCreado() {
-		Util.Escribir(femenino + "planta.");
+		Util.escribir(Util.mensaje_femenino() + "planta.");
 	}
 }

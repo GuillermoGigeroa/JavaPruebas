@@ -55,7 +55,7 @@ public class Regador extends Persona{
 	}
 
 	private void MensajeRiego(Planta planta) {
-		Util.Escribir("El regador " + this.getNombre() + " ha regado la planta " + planta.getNombre() + ".");
+		Util.escribir("El regador " + this.getNombre() + " ha regado la planta " + planta.getNombre() + ".");
 	}
 
 	// getters & setters
@@ -75,12 +75,15 @@ public class Regador extends Persona{
 		this.nombre = nombre;
 	}
 
+	@Override
 	public void mensajeCreado() {
 		if(sexo) {
-			Util.Escribir(Objeto.masculino + "regador.");
+			Util.escribir(Util.mensaje_masculino() + "regador.");
 		}
 		else{
-			Util.Escribir(Objeto.femenino + "regadora.");
+			Util.escribir(Util.mensaje_femenino() + "regadora.");
 		}
 	}
+	
+	
 }

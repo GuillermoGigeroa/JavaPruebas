@@ -1,6 +1,6 @@
 package dominio;
 
-public class Regadera implements Objeto {
+public class Regadera extends Objeto {
 	Boolean tieneAgua;
 
 	Regadera() {
@@ -48,14 +48,14 @@ public class Regadera implements Objeto {
 
 	private void Mensaje(Regador regador) {
 		if (this.tieneAgua) {
-			Util.Escribir("Regadera ha sido llenada por " + regador.getNombre() + ".");
+			Util.escribir("Regadera ha sido llenada por " + regador.getNombre() + ".");
 		} else {
-			Util.Escribir("Regadera ha sido utilizada por " + regador.getNombre() + " y se encuentra vacía.");
+			Util.escribir("Regadera ha sido utilizada por " + regador.getNombre() + " y se encuentra vacía.");
 		}
 	}
 
 	@Override
 	public void mensajeCreado() {
-		Util.Escribir(femenino + "regadera.");
+		Util.escribir(Util.mensaje_femenino()+ "regadera.");
 	}
 }
