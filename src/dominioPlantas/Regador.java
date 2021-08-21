@@ -1,4 +1,5 @@
 package dominioPlantas;
+import helper.Util;
 
 public class Regador extends Persona{
 	// constructores

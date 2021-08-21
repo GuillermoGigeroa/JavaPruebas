@@ -1,4 +1,4 @@
-package dominioPlantas;
+package helper;
 
 public class Util {
 	public static String mensaje_masculino() {
