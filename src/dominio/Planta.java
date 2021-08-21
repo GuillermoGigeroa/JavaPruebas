@@ -1,4 +1,5 @@
-package dominioPlantas;
+package dominio;
+import abstracts.Objeto;
 import helper.Util;
 
 public class Planta extends Objeto {

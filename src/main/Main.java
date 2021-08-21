@@ -1,10 +1,11 @@
 package main;
-import dominioPlantas.*;
+import abstracts.Objeto;
+import dominio.*;
 import helper.Util;
 import helper.View;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void ejemploPlantas() {
 		Objeto planta1 = new Planta("Bebecita", "Amarillo");
 		Objeto planta2 = new Planta("Bebelin");
 		Regador regador1 = new Regador("Guillermina",false);
@@ -24,6 +25,9 @@ public class Main {
 		Util.raya();
 		View.MostrarPlanta(planta1);
 		View.MostrarPlanta(planta2);
+	}
+	public static void main(String[] args) {
+		ejemploPlantas();
 	}
 }
 

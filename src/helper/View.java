@@ -1,7 +1,7 @@
 package helper;
 
-import dominioPlantas.Objeto;
-import dominioPlantas.Planta;
+import abstracts.Objeto;
+import dominio.Planta;
 
 public class View {
 	public static void Nombre(String nombre) {

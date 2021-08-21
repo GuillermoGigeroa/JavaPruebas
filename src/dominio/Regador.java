@@ -1,4 +1,6 @@
-package dominioPlantas;
+package dominio;
+import abstracts.Objeto;
+import abstracts.Persona;
 import helper.Util;
 
 public class Regador extends Persona{
