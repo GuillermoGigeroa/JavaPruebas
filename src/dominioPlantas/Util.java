@@ -1,4 +1,4 @@
-package dominio;
+package dominioPlantas;
 
 public class Util {
 	public static String mensaje_masculino() {
@@ -11,7 +11,7 @@ public class Util {
 		System.out.println(esto);
 	}
 
-	public static void linea() {
+	public static void lineaVacia() {
 		System.out.println();
 	}
 

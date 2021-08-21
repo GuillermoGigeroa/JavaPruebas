@@ -1,13 +1,13 @@
-package dominio;
+package dominioPlantas;
 
 public class Regadera extends Objeto {
-	Boolean tieneAgua;
+	private Boolean tieneAgua;
 
-	Regadera() {
-		this.inicializar();
+	public Regadera() {
+		this.inicializar(defaultAgua());
 	}
 
-	Regadera(Boolean tieneAgua) {
+	public Regadera(Boolean tieneAgua) {
 		this.inicializar(tieneAgua);
 	}
 
@@ -15,24 +15,16 @@ public class Regadera extends Objeto {
 		return false;
 	}
 
-	private void inicializar() {
-		this.inicializar(this.defaultAgua());
-	}
-
 	private void inicializar(Boolean tieneAgua) {
-		this.inicializarObjeto();
 		this.setTieneAgua(tieneAgua);
-	}
-
-	private void inicializarObjeto() {
 		this.mensajeCreado();
 	}
 
-	protected Boolean getTieneAgua() {
+	public Boolean getTieneAgua() {
 		return tieneAgua;
 	}
 
-	protected void setTieneAgua(Boolean tieneAgua) {
+	public void setTieneAgua(Boolean tieneAgua) {
 		this.tieneAgua = tieneAgua;
 	}
 

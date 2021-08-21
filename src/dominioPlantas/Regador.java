@@ -1,43 +1,37 @@
-package dominio;
+package dominioPlantas;
 
 public class Regador extends Persona{
 	// constructores
-	Regador() {
-		this.inicializar();
+	public Regador() {
+		this.inicializar(this.nombreDefault());
 	}
 
-	Regador(String nombre) {
+	public Regador(String nombre) {
 		this.inicializar(nombre);
 	}
 
-	Regador(String nombre, Boolean sexo) {
+	public Regador(String nombre, Boolean sexo) {
 		this.inicializar(nombre, sexo);
 	}
 
 	// métodos de la clase
-	private void inicializar() {
-		this.setNombre("Sin nombre");
-		this.setSexo(true);
-		this.inicializarObjeto();
+	private String nombreDefault() {
+		return "Sin nombre";
 	}
 
 	private void inicializar(String nombre) {
 		this.setNombre(nombre);
 		this.setSexo(true);
-		this.inicializarObjeto();
+		this.mensajeCreado();
 	}
 
 	private void inicializar(String nombre, Boolean sexo) {
 		this.setNombre(nombre);
 		this.setSexo(sexo);
-		this.inicializarObjeto();
-	}
-
-	private void inicializarObjeto() {
 		this.mensajeCreado();
 	}
 
-	protected Boolean regarPlanta(Objeto O_planta, Objeto O_regadera) {
+	public Boolean regarPlanta(Objeto O_planta, Objeto O_regadera) {
 		Planta planta = (Planta) O_planta;
 		Regadera regadera = (Regadera) O_regadera;
 		if (regadera.getTieneAgua()) {
@@ -49,29 +43,29 @@ public class Regador extends Persona{
 		return false;
 	}
 
-	protected void llenarRegadera(Objeto O_regadera) {
+	public void llenarRegadera(Objeto O_regadera) {
 		Regadera regadera = (Regadera) O_regadera;
 		regadera.Llenar(this);
 	}
 
 	private void MensajeRiego(Planta planta) {
-		Util.escribir("El regador " + this.getNombre() + " ha regado la planta " + planta.getNombre() + ".");
+		Util.escribir(getNombre() + " ha regado la planta " + planta.getNombre() + ".");
 	}
 
 	// getters & setters
-	protected Boolean getSexo() {
+	public Boolean getSexo() {
 		return sexo;
 	}
 
-	protected void setSexo(Boolean sexo) {
+	public void setSexo(Boolean sexo) {
 		this.sexo = sexo;
 	}
 
-	protected String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	protected void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 

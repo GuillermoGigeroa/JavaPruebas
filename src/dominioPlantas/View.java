@@ -1,4 +1,4 @@
-package dominio;
+package dominioPlantas;
 
 public class View {
 	public static void Nombre(String nombre) {
@@ -25,6 +25,6 @@ public class View {
 		Color(estaPlanta.getColor());
 		EstadoDeRiego(estaPlanta.getRegado());
 		Util.raya();
-		Util.linea();
+		Util.lineaVacia();
 	}
 }
