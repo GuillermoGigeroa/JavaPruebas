@@ -25,11 +25,19 @@ public class Main {
 		View.MostrarPlanta(planta1);
 		View.MostrarPlanta(planta2);
 	}
+	public static void ejemploArmas() {
+		Arma ak47 = new Arma();
+		Tirador tirador = new Tirador("Guille",true);
+		Cargador cargador = new Cargador();
+		cargador.agregarBalas(10);
+		tirador.cargarArma(ak47, cargador);
+		tirador.dispararArma(ak47,12);
+		// Pasar Arma a abstract y agregar distintas armas y daño
+		// Crear cargadores especificos para cada arma
+	}
 	public static void main(String[] args) {
 		//ejemploPlantas();
-		Objeto ak47 = new Arma("Ak47",false);
-		((Arma) ak47).disparar();
-		//Crear cargadores, cantidad de balas, disparo, bala
+		ejemploArmas();
 	}
 }
 

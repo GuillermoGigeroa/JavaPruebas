@@ -34,6 +34,26 @@ public class Tirador extends Persona {
 			Util.mensaje_femenino("tiradora");
 		}
 	}
+	
+	public void dispararArma(Arma arma) {
+		arma.disparar();
+	}
+	
+	public void dispararArma(Arma arma, int cantidadDeVeces) {
+		for (int x = 0; x < cantidadDeVeces; x++) {
+			arma.disparar();
+		}
+	}
+	
+	public Boolean cargarArma(Arma arma, Cargador cargador) {
+		if (arma.tieneCargador()) {
+			return false;
+		}
+		else {
+			arma.ponerCargador(cargador);
+			return true;
+		}
+	}
 
 	// getters y setters
 	public void setNombre(String nombre) {
