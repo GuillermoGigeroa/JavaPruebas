@@ -4,7 +4,8 @@ import helper.Util;
 
 public class Regadera extends Objeto {
 	private Boolean tieneAgua;
-
+	
+	// constructores
 	public Regadera() {
 		super("regadera");
 		setTieneAgua(false);
@@ -15,15 +16,8 @@ public class Regadera extends Objeto {
 		super("regadera");
 		setTieneAgua(tieneAgua);
 	}
-
-	public Boolean getTieneAgua() {
-		return tieneAgua;
-	}
-
-	public void setTieneAgua(Boolean tieneAgua) {
-		this.tieneAgua = tieneAgua;
-	}
-
+	
+	// métodos de la clase
 	public void Llenar(Regador regador) {
 		this.tieneAgua = true;
 		this.Mensaje(regador);
@@ -45,5 +39,14 @@ public class Regadera extends Objeto {
 	@Override
 	public void mensajeCreado() {
 		Util.mensaje_femenino(super.getNombreObjeto());
+	}
+	
+	// getters y setters
+	public Boolean getTieneAgua() {
+		return tieneAgua;
+	}
+
+	public void setTieneAgua(Boolean tieneAgua) {
+		this.tieneAgua = tieneAgua;
 	}
 }

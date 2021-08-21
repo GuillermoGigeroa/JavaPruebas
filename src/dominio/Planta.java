@@ -9,30 +9,32 @@ public class Planta extends Objeto {
 	private static final String defaultColor = "Verde";
 	private static final String defaultNombre = "Sin nombre";
 	private static final Boolean defaultRiego = false;
+	private static final String nombreObjeto = "planta";
+	private static final Boolean generoObjeto = false;
 
 	// constructores
 	public Planta() {
-		super("planta");
+		super(nombreObjeto, generoObjeto);
 		this.inicializar(defaultNombre, defaultColor, defaultRiego);
 	}
 
 	public Planta(String nombre) {
-		super("planta");
+		super(nombreObjeto, generoObjeto);
 		this.inicializar(nombre, defaultColor, defaultRiego);
 	}
 	
 	public Planta(Boolean regado) {
-		super("planta");
+		super(nombreObjeto, generoObjeto);
 		this.inicializar(defaultNombre, defaultColor, regado);
 	}
 
 	public Planta(String nombre, String color) {
-		super("planta");
+		super(nombreObjeto, generoObjeto);
 		this.inicializar(nombre, color, defaultRiego);
 	}
 
 	public Planta(String nombre, String color, Boolean regado) {
-		super("planta");
+		super(nombreObjeto, generoObjeto);
 		this.inicializar(nombre, color, regado);
 	}
 
@@ -51,8 +53,13 @@ public class Planta extends Objeto {
 	public void secarse() {
 		regado = false;
 	}
+	
+	@Override
+	public void mensajeCreado() {
+		Util.mensaje_femenino(super.getNombreObjeto());
+	}
 
-	// getters & setters
+	// getters y setters
 	public String getColor() {
 		return color;
 	}
@@ -75,10 +82,5 @@ public class Planta extends Objeto {
 
 	public void setRegado(Boolean regado) {
 		this.regado = regado;
-	}
-	
-	@Override
-	public void mensajeCreado() {
-		Util.mensaje_femenino(super.getNombreObjeto());
 	}
 }

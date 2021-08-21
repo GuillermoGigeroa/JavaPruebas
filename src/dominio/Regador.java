@@ -26,7 +26,6 @@ public class Regador extends Persona{
 	}
 
 	// métodos de la clase
-
 	public Boolean regarPlanta(Objeto O_planta, Objeto O_regadera) {
 		Planta planta = (Planta) O_planta;
 		Regadera regadera = (Regadera) O_regadera;
@@ -48,8 +47,17 @@ public class Regador extends Persona{
 		Util.escribir(getNombre() + " ha regado la planta " + planta.getNombre() + ".");
 	}
 	
-	// getters & setters
+	@Override
+	public void mensajeCreado() {
+		if(sexo) {
+			Util.mensaje_masculino("regador");
+		}
+		else{
+			Util.mensaje_femenino("regadora");
+		}
+	}
 	
+	// getters y setters
 	public String getNombre() {
 		return super.getNombre();
 	}
@@ -66,15 +74,4 @@ public class Regador extends Persona{
 		super.setSexo(sexo);
 	}
 
-	@Override
-	public void mensajeCreado() {
-		if(sexo) {
-			Util.mensaje_masculino("regador");
-		}
-		else{
-			Util.mensaje_femenino("regadora");
-		}
-	}
-	
-	
 }

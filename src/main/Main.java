@@ -1,8 +1,7 @@
 package main;
-import abstracts.Objeto;
+import abstracts.*;
 import dominio.*;
-import helper.Util;
-import helper.View;
+import helper.*;
 
 public class Main {
 	public static void ejemploPlantas() {
@@ -27,7 +26,10 @@ public class Main {
 		View.MostrarPlanta(planta2);
 	}
 	public static void main(String[] args) {
-		ejemploPlantas();
+		//ejemploPlantas();
+		Objeto ak47 = new Arma("Ak47",false);
+		((Arma) ak47).disparar();
+		//Crear cargadores, cantidad de balas, disparo, bala
 	}
 }
 
