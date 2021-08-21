@@ -6,20 +6,14 @@ public class Regadera extends Objeto {
 	private Boolean tieneAgua;
 
 	public Regadera() {
-		this.inicializar(defaultAgua());
+		super("regadera");
+		setTieneAgua(false);
+		mensajeCreado();
 	}
 
 	public Regadera(Boolean tieneAgua) {
-		this.inicializar(tieneAgua);
-	}
-
-	private Boolean defaultAgua() {
-		return false;
-	}
-
-	private void inicializar(Boolean tieneAgua) {
-		this.setTieneAgua(tieneAgua);
-		this.mensajeCreado();
+		super("regadera");
+		setTieneAgua(tieneAgua);
 	}
 
 	public Boolean getTieneAgua() {
@@ -50,6 +44,6 @@ public class Regadera extends Objeto {
 
 	@Override
 	public void mensajeCreado() {
-		Util.escribir(Util.mensaje_femenino()+ "regadera.");
+		Util.mensaje_femenino(super.getNombreObjeto());
 	}
 }

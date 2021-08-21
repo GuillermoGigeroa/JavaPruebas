@@ -1,12 +1,14 @@
 package helper;
 
 public class Util {
-	public static String mensaje_masculino() {
-		return "Se ha creado un nuevo ";
+	public static void mensaje_masculino(String nombreObjeto) {
+		escribir("Se ha creado un nuevo " + nombreObjeto + ".");
 	}
-	public static String mensaje_femenino() {
-		return "Se ha creado una nueva ";
+
+	public static void mensaje_femenino(String nombreObjeto) {
+		escribir("Se ha creado una nueva " + nombreObjeto + ".");
 	}
+
 	public static void escribir(String esto) {
 		System.out.println(esto);
 	}
