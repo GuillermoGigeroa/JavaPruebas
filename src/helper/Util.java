@@ -12,15 +12,15 @@ public class Util {
 	public static void escribir(String esto) {
 		System.out.println(esto);
 	}
-	
+
 	public static void escribir(String esto1, String esto2) {
-		System.out.println(esto1+esto2);
+		System.out.println(esto1 + esto2);
 	}
-	
+
 	public static void escribir(String esto1, String esto2, String esto3) {
-		System.out.println(esto1+esto2+esto3);
+		System.out.println(esto1 + esto2 + esto3);
 	}
-	
+
 	public static void escribir(int esto) {
 		System.out.println(esto);
 	}
